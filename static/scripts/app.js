@@ -179,7 +179,7 @@ function visualize(stream) {
 }
 
 var wantedWords = [
-  'Zero',
+  'Nulis',
   'One',
   'Two',
   'Three',
