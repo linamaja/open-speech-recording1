@@ -179,26 +179,17 @@ function visualize(stream) {
 }
 
 var wantedWords = [
-  'Nulis',
-  'One',
-  'Two',
-  'Three',
-  'Four',
-  'Five',
-  'Six',
-  'Seven',
-  'Eight',
-  'Nine',
-  'On',
-  'Off',
-  'Stop',
-  'Go',
-  'Up',
-  'Down',
-  'Left',
-  'Right',
-  'Yes',
-  'No',
+'Laba diena, šiandien nusimato lietus.',
+'Surašykite visus vardus ir pavardes.',
+'Suskambės 100 orkestro pūtikų performansas ir „Tapybos maršrutizatorius“',
+'Čiurlionio namų pokalbių-susitikimų ciklo su aukščiausiai įvertintais Lietuvos kūrėjais pirmasis svečias – režisierius Audrius Stonys.',
+'Kalbos kitimo greitis pirmiausia yra susijęs su sociokultūrinėmis, ekonominėmis sąlygomis.',
+'Kunigas Vladas Mironas – ne tik signataras, bet ir itin aktyvus visuomenininkas, šalies ministras pirmininkas, kultūrininkas.',
+'Mokytoja sako, kad egzaminams moksleiviai vis dar ruošiasi paskutinę minutę.',
+'Su Egle kalbamės ne tik apie kūrybinius, bet ir svetimoje šalyje gyvenant kylančius iššūkius.',
+'Kūrybingumo pamoka su Kristupu Saboliumi.',
+'Vakaro programa: dainos ir šokiai.',
+'Jau pražydo visos gėlės.',
 ];
 
 var fillerWords = [
@@ -230,10 +221,10 @@ function getRecordedWords() {
 function getAllWantedWords() {
   var wordCounts = {};
   wantedWords.forEach(function(word) {
-    wordCounts[word] = 5;
+    wordCounts[word] = 1;
   });
   fillerWords.forEach(function(word) {
-    wordCounts[word] = 1;
+    wordCounts[word] = 0;
   });
   return wordCounts;
 }
@@ -314,7 +305,8 @@ function startRecording() {
   console.log(mediaRecorder.state);
   console.log("recorder started");
   record.style.background = "red";
-  setTimeout(endRecording, 1500);
+  setTimeout(endRecording, 10000);
+  //keičiau laiką. Lina
 }
 
 function endRecording() {
