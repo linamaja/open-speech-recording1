@@ -354,7 +354,8 @@ function uploadNextClip() {
     if (this.status == 200) {
       var blob = this.response;
       var ajaxRequest = new XMLHttpRequest();
-      var uploadUrl = '/upload?word="' + word + '"&_csrf_token=' + csrf_token;
+	    var encodedWord = encodeURIComponent(word);
+      var uploadUrl = '/upload?word=' + encodedWord + '&_csrf_token=' + csrf_token;
       ajaxRequest.open('POST', uploadUrl, true);
       ajaxRequest.setRequestHeader('Content-Type', 'application/json');    
       ajaxRequest.onreadystatechange = function() {
