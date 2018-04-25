@@ -217,7 +217,7 @@ function getRecordedWords() {
   });
   return wordCounts;
 }
-
+//keista dažnumas žodžių/sakinių
 function getAllWantedWords() {
   var wordCounts = {};
   wantedWords.forEach(function(word) {
