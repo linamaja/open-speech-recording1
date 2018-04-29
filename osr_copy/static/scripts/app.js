@@ -379,6 +379,5 @@ function uploadNextClip() {
 }
 
 function allDone() {
-  document.cookie = 'all_done=true; path=/';
   location.reload(true);
 }
